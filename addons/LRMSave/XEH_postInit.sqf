@@ -1,11 +1,22 @@
 #include "script_component.hpp"
 
+[] call FUNC(myFunction);
+
 [
 	"CAManBase",
 	"killed",
 	{
-		_sectionName = format["%1:%2:%3:%4:%5", systemtimeUTC select 0, systemtimeUTC select 1, systemtimeUTC select 2, systemtimeUTC select 3, systemtimeUTC select 4];
+		_sectionName = DATE;
 		["write", [_sectionName, "Event", "Death"]] call GVAR(database);
+	}
+] call CBA_fnc_addClassEventHandler;
+
+[
+	"CAManBase",
+	"killed",
+	{
+		_sectionName = DATE;
+		[GVAR(database),_sectionName] call FUNC(player_save);
 	}
 ] call CBA_fnc_addClassEventHandler;
 
