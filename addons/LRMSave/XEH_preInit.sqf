@@ -34,5 +34,15 @@
 	nil
 ] call CBA_fnc_addSetting;
 
+[
+    QGVAR(playerSaveGear),
+    "CHECKBOX",
+    ["Gear Saving", "Whether the players gear is saved."],
+    ["LRM Saving", "Player Settings"],
+    true,
+    1,
+	nil
+] call CBA_fnc_addSetting;
+
 
 ADDON = true;

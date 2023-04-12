@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * 
+ * [_database] call AAF_LRMSave_fnc_player_save
  *
 */
 
@@ -24,4 +24,8 @@ if (GVAR(playerSavePosition)) then {
 
 if (GVAR(playerSaveMedical)) then {
 	[_database, _sectionName] call FUNC(player_saveMedical);
+};
+
+if (GVAR(playerSaveGear)) then {
+	[_database, _sectionName] call FUNC(player_saveGear);
 };
