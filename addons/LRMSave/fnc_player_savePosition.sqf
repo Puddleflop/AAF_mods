@@ -10,8 +10,8 @@
  * Return Value:
  * True <BOOL>
  *
- * Example:
- * 
+ * Example: 
+ * [_database, _sectionName] call AAF_LRMSave_fnc_player_savePosition
  *
 */
 

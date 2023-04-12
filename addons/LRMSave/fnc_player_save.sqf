@@ -21,3 +21,7 @@ private _sectionName = DATE;
 if (GVAR(playerSavePosition)) then {
 	[_database, _sectionName] call FUNC(player_savePosition);
 };
+
+if (GVAR(playerSaveMedical)) then {
+	[_database, _sectionName] call FUNC(player_saveMedical);
+};

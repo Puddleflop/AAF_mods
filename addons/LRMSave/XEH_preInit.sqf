@@ -24,4 +24,15 @@
 	nil
 ] call CBA_fnc_addSetting;
 
+[
+    QGVAR(playerSaveMedical),
+    "CHECKBOX",
+    ["Medical Saving", "Whether the players medical state is saved."],
+    ["LRM Saving", "Player Settings"],
+    true,
+    1,
+	nil
+] call CBA_fnc_addSetting;
+
+
 ADDON = true;
