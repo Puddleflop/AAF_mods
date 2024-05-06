@@ -1,0 +1,39 @@
+# Ignore IDE and editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore system and temporary files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignore log files
+*.log
+
+# Ignore compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore package files
+*.tar.gz
+*.zip
+
+# Ignore database files
+*.db
+*.sqlite
+
+# Ignore configuration files with sensitive information
+config.ini
+secrets.ini
+
+# Ignore generated documentation
+docs/
+
+# Ignore any other files or directories that are not necessary for version control
