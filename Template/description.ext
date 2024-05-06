@@ -1,0 +1,97 @@
+// DESCRIPTION //////////////////////////////////////////////////////////////////////////////
+//
+//	- Description.ext handles all framework and Mission specific settings.
+//  https://community.bistudio.com/wiki/Description.ext
+//
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+class Header {
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 60;
+};
+
+// MISSION NAME AND DESCRIPTION ARE DONE HERE. 
+// Editor values will be overwritten. Trust me, I spent an hour or 2 trying to work out why but it looks like just HAVING description.ext forces the game to look for the title in here during load. Shame we can't make it all ingame but what can you do?
+author = "Some Mission Maker"; //If you like it, you shoulda put your name on it.
+briefingName = "Some AAF Mission"; //Mission name in the mission select screen (Otherwise it shows the PBO name which can get confusing)
+onLoadName = "Some AAF Mission"; //Mission name in the mission loading screen.
+onLoadMission = "AAF Does Stuff."; //Mission description in the loading screen.
+loadScreen = "img\loading.paa"; // Image that appears while mission is loading. Can be replaced but the image must be a .paa in 1024x512.
+
+// SOUNDS UNCOMMENT AND COMPLETE IF ADDING CUSTOM SOUNDS ////////////////////////////////////
+/*class CfgSounds {
+	sounds[] = {};
+	class wolf1 {
+		name = "my_wolf_sound"; // how the sound is referred to in the editor (e.g. trigger effects)
+		sound[] = { "sound\wolf1.ogg", 1, 1, 100 };// filename, volume, pitch, distance (optional)
+		titles[] = { 1, "*wolf growls*" }; // subtitle delay in seconds, subtitle text
+	};
+	class AnotherSound {
+		name = "Sound with advanced subtitle options";
+		sound[] = { "somesound.ogg", 1, 1 };
+		forceTitles = true;			// will display titles even if global show titles option is off
+		titlesFont = "LCD14";		// titles font family
+		titlesSize = 0.1;			// titles font size
+		titlesStructured = true;	// treat titles as Structured Text (see below)
+		titles[] = {
+			0, <t color="#ff0000">Red text</t>,
+			1, <t color="#00ff00">Green text</t>
+		};
+	};
+};*/
+// MUSIC UNCOMMENT AND COMPLETE IF USING CUSTOM MUSIC ///////////////////////////////////////
+/*class CfgMusic {
+	tracks[] = {};
+	class MyIntro {
+		name	= "My intro music"; // display name
+		sound[]	= { "\sound\filename.ogg", db + 0, 1.0 }; // filename, volume, pitch
+	};
+	class Ludwig9 {
+		name	= "Ludwig Van Beethoven's Ninth Symphony";
+		sound[]	= { "\sound\ludwig9.ogg", db + 10, 1.0 };
+	};
+};*/
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+// LEAVE EVERYTHING BELOW THIS LINE ALONE ///////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// RESPAWN
+respawn="BASE";
+respawnDelay=10;
+respawnDialog= 0;
+//respawnButton=1; // allows player manual respawn.
+respawnOnStart=-1; //setting this to -1 stops onplayerrespawn.sqf from firing on start.
+
+// Misc
+disabledAI = 1; //Turns off AI filling player slots.
+enableDebugConsole = 1;
+disableChannels[]={0,2,4,5};
+allowProfileGlasses = 1;
+// CORPSES & WRECKS /////////////////////////////////////////////////////////////////////////
+corpseManagerMode = 3;
+corpseLimit = 15;
+corpseRemovalMinTime = 60;
+corpseRemovalMaxTime = 180;
+
+wreckManagerMode = 3;
+wreckLimit = 10;
+wreckRemovalMinTime = 60;
+wreckRemovalMaxTime = 180;
+
+minPlayerDistance = 100;
+// AlLLOWED REMOTE EXEC//////////////////////////////////////////////////////////////////////
+class CfgRemoteExec {
+	class Commands { // List of script commands allowed to be sent from client via remoteExec.
+		mode = 2;
+		jip = 1;
+	};
+	class Functions { // List of script functions allowed to be sent from client via remoteExec.
+		mode = 2;
+		jip = 1;
+	};
+};
+allowFunctionsRecompile = 1;
+/////////////////////////////////////////////////////////////////////////////////////////////
