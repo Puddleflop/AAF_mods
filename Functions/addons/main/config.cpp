@@ -1,13 +1,17 @@
+#include "script_component.hpp"
+
 class CfgPatches {
 	class AAF {
-		name = "AAF Functions";
-		author = "AAF";
-		requiredVersion = 1.76;
+		name = COMPONENT_NAME;
+		author = ECSTRING(common,AAF);
+		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {"ace_interaction","ace_zeus","cba_main"};
 		units[] = {};
 		weapons[] = {};
 	};
 };
+
+
 class Extended_PreInit_EventHandlers {//CBA Settings
     class AAF_CBA_Settings {
         init = "call compile preprocessFileLineNumbers '\aaf_functions\XEH_preInit.sqf'";
@@ -207,7 +211,7 @@ class CfgFunctions {
 			//MISC ////////////////////////////////////////////////////////////////////////////////
 			class afk {//AAF_fnc_afk
 				file = "\aaf_functions\functions\afk.sqf";
-			}; 
+			};
 			class shbf {//AAF_fnc_shbf
 				file = "\aaf_functions\functions\shbf.sqf";
 			};
