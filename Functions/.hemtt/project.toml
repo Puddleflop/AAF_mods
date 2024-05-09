@@ -15,6 +15,3 @@ include = [
 [version]
 git_hash = 0
 
-
-[hemtt.launch.default]
-presets = ["Arma_3_Preset_AAF_Modern"]
