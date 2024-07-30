@@ -1,6 +1,5 @@
 PREP(intro);
 PREP(monitor);
-PREP(ServerPostInit);
-PREP(ClientPostInit);
-PREP(ClientPreInit);
+PREP(PostInit);
+PREP(PreInit);
 

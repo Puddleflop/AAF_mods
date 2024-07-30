@@ -11,7 +11,7 @@ class Extended_PreInit_EventHandlers {
 		init = QUOTE(call COMPILE_SCRIPT(XEH_preInit));
 	};
 	class AAF_PreInit {
-		clientinit = QUOTE(call FUNC(ClientPreInit););
+		init = QUOTE(call FUNC(PreInit););
 	};
 };
 
@@ -20,7 +20,6 @@ class Extended_PostInit_EventHandlers {
 		init = QUOTE(call COMPILE_SCRIPT(XEH_postInit));
 	};
 	class AAF_PostInit {
-		serverinit = QUOTE(call FUNC(ServerPostInit););
-		clientinit = QUOTE(call FUNC(ClientPostInit););
+		init = QUOTE(call FUNC(PostInit););
 	};
 };

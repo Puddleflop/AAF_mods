@@ -8,7 +8,7 @@ class CfgVehicles {//ACE Self-Interaction Actions
 				displayName = "AAF Actions";
 				condition = "true";
 				exceptions[] = {};
-				icon = "UI\AAF_icon.paa";
+				icon = QPATHTOF(ui\AAF_icon.paa);
 				class aaf_afk {
 					displayName = "AFK";
 					condition = "true";
@@ -20,14 +20,14 @@ class CfgVehicles {//ACE Self-Interaction Actions
 					displayName = "I'm stuck in a rock!";
 					condition = "true";
 					exceptions[] = {};
-					statement = QUOTE(call FUNC(moveToSafePosition));
+					statement = QUOTE([] call FUNC(moveToSafePosition));
 					icon = "\a3\ui_f\data\map\mapcontrol\Rock_CA.paa";
 				};
 				class aaf_SHBF {
 					displayName = "Super Head Bug Fix™";
 					condition = "true";
 					exceptions[] = {};
-					statement = QUOTE(spawn FUNC(superHeadBugFix));
+					statement = QUOTE([] spawn FUNC(superHeadbugFix));
 					icon = "\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa";
 				};
 			};

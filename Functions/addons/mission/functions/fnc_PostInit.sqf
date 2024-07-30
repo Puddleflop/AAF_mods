@@ -25,6 +25,24 @@ if (hasInterface) then {
 	};
 };
 
+if (isServer) then {
+	["Initialize", [true]] call BIS_fnc_dynamicGroups;
+	private _useReducer = missionNamespace getVariable ["aaf_reducer", false];
+	if (_useReducer) then {
+		f_var_reducerAggressiveness = 2;
+		private _reducer = [30] spawn aaf_fnc_rInit;
+	};
+	{
+		_x deleteGroupWhenEmpty true;
+	} forEach allGroups;
+	private _aafaiResupply = [] spawn aaf_fnc_aiResupply;
+	{
+		_x addEventHandler ["CuratorGroupPlaced", {
+			_group deleteGroupWhenEmpty true
+		}];
+	} forEach allCurators;
+};
+
 private _introRun = missionNamespace getvariable ["aaf_intro", false];
 if (_introRun) then {
 	[] spawn FUNC(intro);
