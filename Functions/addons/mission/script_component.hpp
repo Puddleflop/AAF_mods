@@ -1,5 +1,5 @@
-#define COMPONENT main
-#define COMPONENT_BEAUTIFIED Main
+#define COMPONENT mission
+#define COMPONENT_BEAUTIFIED Mission
 #include "\z\aaf\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

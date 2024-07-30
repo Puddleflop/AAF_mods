@@ -1,5 +1,5 @@
-#define COMPONENT main
-#define COMPONENT_BEAUTIFIED Main
+#define COMPONENT reducer
+#define COMPONENT_BEAUTIFIED Reducer
 #include "\z\aaf\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
