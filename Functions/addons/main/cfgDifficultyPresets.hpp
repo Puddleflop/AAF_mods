@@ -1,3 +1,5 @@
+#include "script_component.hpp"
+
 class DifficultyPresets {
 	class CustomDifficulty {
 		displayName = "AAF Difficulty";	// Name of the difficulty preset.

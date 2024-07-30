@@ -13,12 +13,12 @@ include = [
 ]
 
 [version]
+path = "addons/main/script_version.hpp"
 git_hash = 0
 
 [hemtt.launch.default]
-workshop = [
-    "450814997", # CBA_A3
-]
+parameters = ["-noSplash", "-skipIntro"]
+presets = ["Arma 3 Preset AAF Core Dev 29JUL24.html"]
 
 [hemtt.launch.spe]
 workshop = [
@@ -44,11 +44,3 @@ dlc = [
     "Western Sahara",
 ]
 
-[hemtt.launch.rhs]
-workshop = [
-    "450814997", # CBA_A3's Workshop ID
-    "843425103", # RHS AFRF Workshop ID
-    "843577117", # RHS USAF Workshop ID
-    "843593391", # RHS GREF Workshop ID
-    "843632231", # RHS SAF  Workshop ID
-]

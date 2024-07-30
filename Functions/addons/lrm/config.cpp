@@ -10,10 +10,6 @@ class CfgPatches
 		requiredAddons[] = {"ace_interaction", "ace_zeus", "cba_main"};
 		units[] = {};
 		weapons[] = {};
-		VERSION_CONFIG;
 	};
 };
-
-
 #include "CfgEventHandlers.hpp"
-#include "cfgDifficultyPresets.hpp" //New custom preset
